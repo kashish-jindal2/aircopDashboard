@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>login</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6 mt-4">
+          <img src="images/logo.svg" class="logo" alt="" />
+
+          <div class="col">
+            <form name="myForm" method="post">
+              <div class="col-sm-12 col-lg-8 mt-5">
+                <p id="login">Login</p>
+                <hr>
+                <label for="validationCustom05" class="form-label py-2 mt-2">Username</label>
+                <input type="text" class="form-control form-control-lg" name="username" placeholder=""
+                  id="validationCustom05" required />
+              </div>
+              <div class="col-sm-12 col-lg-8 mt-2">
+                <label for="validationCustom06" class="form-label">Enter your Password</label>
+                <input type="password" class="form-control form-control-lg" id="validationCustom06" name="password"
+                  required placeholder="Password" />
+                <input type="password" class="form-control form-control-lg mt-2 text-muted" id="validationCustom06"
+                  name="confirm" required placeholder="Confirm password" />
+              </div>
+              <div class="row mt-2">
+                <div class="col-sm-6 col-lg-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidChecked" required placeholder />
+                    <label class="form-check-label" for="invalidCheck">
+                      Remember me ?
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                  <p class="float-end" id="forget">Forget Password?</p>
+                </div>
+              </div>
+              <div class="d-grid gap-2 col-8 mt-4">
+                <a href="../../../New-dash/airtel.html" type="button" value="Submit" class="btn btn-lg"
+                  onclick="formValidation()">
+                  Login
+                </a>
+                <p class="text-muted text-center">Need to create new user? Login</p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 mt-3">
+          <img src="images/Group 214.png" alt="" class="d-block w-100" />
+        </div>
+      </div>
+    </div>
+  </header>
+  <main></main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script>
+    function formValidation() {
+      var x = document.myForm.username.value;
+      var y = document.myForm.password.value;
+      var z = document.myForm.confirm.value;
+      if (x == "") {
+        alert("Please enter your name");
+        return false;
+      }
+      else if (y == "") {
+        alert("Please enter your password");
+      } else if (y.length < 8) {
+        alert("Please Enter minimum 8 Character");
+      } else if (z == "") {
+        alert("Please enter your correct password");
+      } else if (z != y) {
+        alert("Passwords do not match"); // corrected alert message
+      }
+      else {
+        document.getElementById("loading").style.display = "block"; // Show loading indicator
+        setTimeout(function () {
+          document.myForm.submit(); // Submit the form after a short delay to display the loading indicator
+        }, 500);
+      }
+    }
+
+    //password
+    // function formValidation() {
+    //     var y = document.myForm.password.value;
+    //     if (y == "") {
+    //       alert("Please enter your password");
+    //     } else if (y =="") {
+    //       alert("UserId is Confirmed");
+    //     } else if (y.length<8) {
+    //       alert("Please Enter Minimum 8 character long Password here");
+    //     }
+    //   }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    .tab button{
+        background-color: #f00;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+    .tab button:hover{
+        background-color: #e20010;
+        color: #fff;
+    }
+    .tab button:active {
+        background-color: #e20010;
+        color: #fff;
+    }
+    .tabContent{
+        background-color: #e2e2e2;
+        padding: 12px;
+        line-height: 21px;
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" data-tab="tab1">Tab 1</button>
+        <button class="tablinks" data-tab="tab2">Tab 2</button>
+        <button class="tablinks" data-tab="tab3">Tab 3</button>
+    </div>
+    <div id="tab1" class="tabContent">
+        <h2>Tab 1</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore modi, provident sed expedita vitae pariatur numquam, eum consequuntur illo, laudantium cum exercitationem ducimus laboriosam neque nulla non quis culpa. Nobis.</p>
+    </div>
+    <div id="tab1" class="tabContent">
+        <h2>Tab 2</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore modi, provident sed expedita vitae pariatur
+            numquam, eum consequuntur illo, laudantium cum exercitationem ducimus laboriosam neque nulla non quis culpa.
+            Nobis.</p>
+    </div>
+    <div id="tab1" class="tabContent">
+        <h2>Tab 3</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore modi, provident sed expedita vitae pariatur
+            numquam, eum consequuntur illo, laudantium cum exercitationem ducimus laboriosam neque nulla non quis culpa.
+            Nobis.</p>
+    </div>
+    <script>
+        const tabButtons = document.querySelectorAll('.tablinks');
+
+        for(var i = 0; i < tabButtons.length; i++){
+            tabButtons[i].addEventListner('click', function() {
+                var tabName = this.dataset.tab;
+                var tabContent = document.getElementById(tabName);
+                var allTab
+                tabContent.style.display = "block";
+                this.classList.add("active");
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body{
+    font-family: 'Nunito', sans-serif;
+    border-radius: 1rem;
+}
+#login{
+font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    color: #00194c;
+}
+.logo{
+    width: 15rem;
+}
+.user {
+    font-size: 1rem;
+    color: black;
+}
+#forgt{
+    color: #8e8e8e;
+    text-decoration: none;
+}
+.pass-icon{
+    cursor: pointer;
+}
+#font{
+font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+}
+.btn.btn-lg{
+    border-radius: 5px;
+    border: 2px solid #f0686f;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+}
+.btn-lg{
+    color: #f00;
+    background: linear-gradient(50deg, #ee1c25 50%, transparent 50%);
+    background-position: right bottom;
+    background-size: 220% 100%;
+    border: 2px solid #ee1c25;
+}
+.btn-lg:hover{
+    background-position: left bottom;
+    color: #fff;
+    border: none;
+    border: 2px solid #ee1c25;
+}
+#newuser{
+    font-family: 'Nunito', sans-serif;
+    font-size: small;
+    cursor: pointer;
+}
